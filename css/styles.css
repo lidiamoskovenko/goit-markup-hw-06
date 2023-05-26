@@ -876,24 +876,29 @@ img {
 padding-left: 24px;
 }
 
-.span-checkbox-icon {
+.modal-span-checkbox {
     position: absolute;
     left: 0;
     top: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 1px 1px;
     width: 16px;
     height: 16px;
     background-color: transparent;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    fill: var(--third-color-font);
+    fill: transparent; ;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
-.modal-checkbox-input:checked + .icon-checkbox {
+.modal-checkbox-input:checked + .modal-label-checkbox > .modal-span-checkbox {
+    border: none; 
     background-color: var(--hover-color);
+    fill: var(--third-color-font);
+    border-color:var(--hover-color)
 }
 
 
@@ -918,4 +923,7 @@ padding-left: 24px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
