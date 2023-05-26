@@ -818,6 +818,26 @@ img {
     padding-left: 38px;
 }
 
+.modal-textarea-wrapper {
+    margin-bottom: 16px;
+}
+.modal-textarea {
+    padding: 8px 16px;
+    height: 120px;
+    resize: none;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+
+}
+
+.modal-input:focus,
+.modal-textarea:focus{
+    outline: none;
+    border-color: var(--main-color-link);
+}
 .modal-form-icon {
     position: absolute;
     top: 50%;
@@ -829,52 +849,37 @@ img {
 
 }
 
-.modal-input:hover + .modal-form-icon,
 .modal-input:focus + .modal-form-icon {
     fill: var(--hover-color);
 }
 
 
-.modal-textarea-wrapper {
-    margin-bottom: 16px;
-}
-.modal-textarea {
-    padding: 8px 16px;
-    height: 120px;
-    resize: none;
-}
-
-.modal-input:hover,
-.modal-input:focus,
-.modal-textarea:focus,
-.modal-textarea:hover {
-    outline: none;
-    border-color: var(--main-color-link);
-}
-
 .modal-textarea::placeholder,
 .modal-form-label,
-.modal-checkbox {
+.modal-label-checkbox,
+.modal-link {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--secon-color-border);
 }
 
-.modal-span {
-    text-decoration-line: underline;
+.modal-link {
     color: var(--main-color-link);
 }
+
 .modal-checkbox-wrapper {
+    position: relative;
     margin-bottom: 24px;
 }
-.modal-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.modal-label-checkbox {
+padding-left: 24px;
 }
 
-.icon-checkbox {
+.span-checkbox-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
     padding: 1px 1px;
     width: 16px;
     height: 16px;
@@ -887,14 +892,8 @@ img {
 
 }
 
-.modal-checkbox-input {
-    appearance: none;
-    position: absolute;
-}
-
-.modal-checkbox-input:checked+.icon-checkbox {
+.modal-checkbox-input:checked + .icon-checkbox {
     background-color: var(--hover-color);
-
 }
 
 
@@ -902,15 +901,16 @@ img {
 .modal-form-button {
     display: block;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
+    height: 56px;
     margin-left: auto;
     margin-right: auto;
     
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--third-color-font);
