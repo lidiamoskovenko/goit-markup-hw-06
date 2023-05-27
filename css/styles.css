@@ -823,6 +823,7 @@ img {
     margin-bottom: 16px;
 }
 .modal-textarea {
+    display: block;
     padding: 8px 16px;
     height: 120px;
     resize: none;
@@ -883,7 +884,7 @@ img {
     width: 16px;
     height: 16px;
     background-color: transparent;
-    border: 1px solid var(--main-color-background);
+    border: 1px solid rgba(46, 47, 66, 0.2);
     border-radius: 2px;
     fill: transparent; ;
     cursor: pointer;
